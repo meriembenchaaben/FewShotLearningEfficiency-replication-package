@@ -39,7 +39,7 @@ The experiments were conducted at the University of Montreal in Canada and the U
 The replication package includes the following files and directories:
 
 - **Protocol and Questionnaires:** All materials related to the study setup, including task descriptions, participant instructions, and questionnaires used during the experiments.
-- **Anonymized Data:** The anonymized log files and data collected from all participants, including time-to-completion records and questionnaire responses.
+- **Anonymized Data:** The anonymized log files and data collected from some participants, including time-to-completion records and questionnaire responses. PS: We don't provide all the collected data.
 - **Scripts:** Python scripts and Jupyter notebooks used for data processing, analysis, and plotting results.
 - **Figures:** Demographic distributions and experimental results generated during the study.
 
