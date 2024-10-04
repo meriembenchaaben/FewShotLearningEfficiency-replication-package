@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="is" type="association" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="uses" type="association" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="have" type="association" source="//@clazz.5" target="//@clazz.4"/>
+  <clazz name="Bank" has="//@clazz.1 //@clazz.3"/>
+  <clazz name="Account" has="//@clazz.4" isMember="//@clazz.0">
+    <attributes name="amount" type="Double"/>
+    <attributes name="type" type="AccountType"/>
+  </clazz>
+  <clazz name="Customer">
+    <attributes name="name" type="String"/>
+    <attributes name="birthdate" type="Date"/>
+  </clazz>
+  <clazz name="ATM" isMember="//@clazz.0"/>
+  <clazz name="Creditcard" isMember="//@clazz.1"/>
+  <clazz name="Employee"/>
+  <clazzcondidate name="account" confidence="1"/>
+  <clazzcondidate name="loan" confidence="4"/>
+  <clazzcondidate name="b" confidence="1"/>
+  <clazzcondidate name="mortgage" confidence="3"/>
+  <clazzcondidate name="contactmethod" confidence="1"/>
+  <clazzcondidate name="partysaving" confidence="1"/>
+  <clazzcondidate name="creditcard" confidence="1"/>
+  <association source="//@clazz.1" target="//@clazz.2"/>
+  <association source="//@clazz.2" target="//@clazz.4"/>
+  <association name="accepts" source="//@clazz.3" target="//@clazz.4"/>
+  <association name="withdraws" source="//@clazz.2" target="//@clazz.3"/>
+  <association name="deposit" source="//@clazz.2" target="//@clazz.1"/>
+  <association name="works" source="//@clazz.0" target="//@clazz.5"/>
+</metamodel:Model>

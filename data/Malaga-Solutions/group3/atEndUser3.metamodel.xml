@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Hotel" has="//@clazz.1 //@clazz.2 //@clazz.3 //@clazz.10 //@clazz.15 //@clazz.16">
+    <attributes name="country" type="String"/>
+  </clazz>
+  <clazz name="Room" generalizes="//@clazz.6 //@clazz.5 //@clazz.4" isMember="//@clazz.0">
+    <attributes name="capacity" type="double"/>
+    <attributes name="roomNumber" type="int"/>
+  </clazz>
+  <clazz name="RoomReservation" has="//@clazz.7 //@clazz.8 //@clazz.9" isMember="//@clazz.0">
+    <attributes name="startDate" type="Date"/>
+    <attributes name="endDate" type="Date"/>
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="Guest" isMember="//@clazz.0">
+    <attributes name="Name" type="String"/>
+  </clazz>
+  <clazz name="SingleRoom" specializes="//@clazz.1"/>
+  <clazz name="DoubleRoom" specializes="//@clazz.1"/>
+  <clazz name="Suite" specializes="//@clazz.1"/>
+  <clazz name="CheckIn" isMember="//@clazz.2">
+    <attributes name="date" type="Date"/>
+  </clazz>
+  <clazz name="CheckOt" isMember="//@clazz.2">
+    <attributes name="date" type="Date"/>
+  </clazz>
+  <clazz name="Payment" isMember="//@clazz.2">
+    <attributes name="timeStamp" type="Date"/>
+  </clazz>
+  <clazz name="Restaurant" has="//@clazz.11 //@clazz.12 //@clazz.13" isMember="//@clazz.0">
+    <attributes name="phone" type="String"/>
+  </clazz>
+  <clazz name="RestaurantReservation" isMember="//@clazz.10"/>
+  <clazz name="Table" isMember="//@clazz.10">
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="Order" isMember="//@clazz.10"/>
+  <clazz name="Cleaning"/>
+  <clazz name="CleaningSchedule" isMember="//@clazz.0"/>
+  <clazz name="Maintenance" isMember="//@clazz.0"/>
+  <clazz name="Employee" specializes="//@clazz.20">
+    <attributes name="salary" type="float"/>
+    <attributes name="surname" type="String"/>
+  </clazz>
+  <clazz name="Manager"/>
+  <clazz name="Receptionist"/>
+  <clazz name="Staff" generalizes="//@clazz.17">
+    <attributes name="name" type="String"/>
+    <attributes name="phone" type="String"/>
+  </clazz>
+  <association source="//@clazz.3" target="//@clazz.2"/>
+  <association source="//@clazz.2" target="//@clazz.1"/>
+  <association source="//@clazz.11" target="//@clazz.12"/>
+  <association source="//@clazz.13" target="//@clazz.12"/>
+  <association source="//@clazz.13" target="//@clazz.3"/>
+  <association source="//@clazz.14" target="//@clazz.1"/>
+  <association source="//@clazz.15" target="//@clazz.14"/>
+  <association source="//@clazz.16" target="//@clazz.1"/>
+</metamodel:Model>

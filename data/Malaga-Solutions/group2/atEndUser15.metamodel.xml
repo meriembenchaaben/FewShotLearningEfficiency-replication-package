@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Product">
+    <attributes name="description" type="String"/>
+    <attributes name="image" type="Image"/>
+    <attributes name="price" type="Double"/>
+    <attributes name="available" type="Boolean"/>
+  </clazz>
+  <clazz name="User" has="//@clazz.2 //@clazz.3">
+    <attributes name="id" type="String"/>
+    <attributes name="address" type="String"/>
+    <attributes name="email" type="String"/>
+    <attributes name="gender" type="char"/>
+  </clazz>
+  <clazz name="Order" has="//@clazz.4" isMember="//@clazz.1">
+    <attributes name="totalAmount" type="Double"/>
+  </clazz>
+  <clazz name="Payment" isMember="//@clazz.1"/>
+  <clazz name="Shipment" isMember="//@clazz.2">
+    <attributes name="return" type="Boolean"/>
+    <attributes name="priority" type="Priority"/>
+    <attributes name="cost" type="Double"/>
+  </clazz>
+  <clazz name="Truck">
+    <attributes name="capacity" type="Double"/>
+    <attributes name="maxSpeed" type="double"/>
+    <attributes name="power" type="int"/>
+    <attributes name="size" type="double"/>
+  </clazz>
+  <clazz name="Driver">
+    <attributes name="birthday" type="Date"/>
+  </clazz>
+  <clazz name="Supplier">
+    <attributes name="email" type="String"/>
+    <attributes name="id" type="int"/>
+  </clazz>
+  <association name="includes" source="//@clazz.2" target="//@clazz.0"/>
+  <association source="//@clazz.3" target="//@clazz.2"/>
+  <association source="//@clazz.5" target="//@clazz.4"/>
+  <association name="drives" source="//@clazz.6" target="//@clazz.5"/>
+  <association name=" provides " source="//@clazz.7" target="//@clazz.0"/>
+</metamodel:Model>

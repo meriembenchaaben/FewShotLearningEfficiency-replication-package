@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Reservation" generalizes="//@clazz.4 //@clazz.3" has="//@clazz.2"/>
+  <clazz name="Guest">
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="Payment" isMember="//@clazz.0">
+    <attributes name="invoiceNumber" type="int"/>
+    <attributes name="paymentDate" type="Date"/>
+    <attributes name="paymentMethod" type="String"/>
+  </clazz>
+  <clazz name="HotelReservation" specializes="//@clazz.0">
+    <attributes name="Check-in"/>
+    <attributes name="Check-out"/>
+    <attributes name="NoOfBeds" type="double"/>
+    <attributes name="NoOfPeople" type="int"/>
+    <attributes name="NoOfRooms" type="int"/>
+  </clazz>
+  <clazz name="RestaurantReservation" specializes="//@clazz.0">
+    <attributes name="date" type="Date"/>
+    <attributes name="tableNumber" type="int"/>
+    <attributes name="time" type="Date"/>
+  </clazz>
+  <clazz name="Task" generalizes="//@clazz.8 //@clazz.7 //@clazz.6">
+    <attributes name="dueDate" type="Date"/>
+    <attributes name="id" type="String"/>
+  </clazz>
+  <clazz name="Cleaning" specializes="//@clazz.5"/>
+  <clazz name="Maintenance" specializes="//@clazz.5">
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="Miscellaneous" specializes="//@clazz.5">
+    <attributes name="id" type="String"/>
+  </clazz>
+  <clazz name="HotelSystem"/>
+  <clazz name="Table">
+    <attributes name="id" type="int"/>
+  </clazz>
+  <association source="//@clazz.1" target="//@clazz.0"/>
+  <association source="//@clazz.0" target="//@clazz.9"/>
+  <association source="//@clazz.5" target="//@clazz.9"/>
+</metamodel:Model>

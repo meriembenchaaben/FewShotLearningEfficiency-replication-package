@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Hotel"/>
+  <clazz name="Room">
+    <attributes name="Type"/>
+    <attributes name="capacity" type="int"/>
+  </clazz>
+  <clazz name="Room-Reservation">
+    <attributes name="Check-In"/>
+    <attributes name="Check-Out"/>
+    <attributes name="Payment"/>
+  </clazz>
+  <clazz name="Restaurant-Reservation"/>
+  <clazz name="Client">
+    <attributes name="DNI"/>
+  </clazz>
+  <clazz name="Order" isMember="//@clazz.8">
+    <attributes name="Food"/>
+    <attributes name="Beverage"/>
+  </clazz>
+  <clazz name="Worker staff"/>
+  <clazz name="Task"/>
+  <clazz name="Dish" has="//@clazz.5"/>
+</metamodel:Model>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Product">
+    <attributes name="name: String"/>
+    <attributes name="reference: String"/>
+    <attributes name="id: int"/>
+  </clazz>
+  <clazz name="Catalog">
+    <attributes name="catalogNumber" type="int"/>
+  </clazz>
+  <clazz name="Image">
+    <attributes name="product" type="int"/>
+    <attributes name="url" type="String"/>
+    <attributes name="caption" type="String"/>
+    <attributes name="title" type="String"/>
+  </clazz>
+  <clazz name="Description">
+    <attributes name="product" type="int"/>
+    <attributes name="key" type="String"/>
+    <attributes name="text" type="String"/>
+  </clazz>
+  <clazz name="Price"/>
+  <clazz name="ProductCatalog"/>
+  <clazz name="Sale">
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="Warehouse">
+    <attributes name="country" type="String"/>
+  </clazz>
+  <association source="//@clazz.0" target="//@clazz.2"/>
+  <association source="//@clazz.0" target="//@clazz.3"/>
+  <association source="//@clazz.5" target="//@clazz.0"/>
+  <association source="//@clazz.5" target="//@clazz.1"/>
+  <association source="//@clazz.5" target="//@clazz.4"/>
+</metamodel:Model>

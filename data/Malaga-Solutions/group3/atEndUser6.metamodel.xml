@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Hotel">
+    <attributes name="numOfStars" type="int"/>
+  </clazz>
+  <clazz name="Room" generalizes="//@clazz.4 //@clazz.2 //@clazz.3">
+    <attributes name="capacity" type="int"/>
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="Single" specializes="//@clazz.1"/>
+  <clazz name="Double" specializes="//@clazz.1"/>
+  <clazz name="Suite" specializes="//@clazz.1"/>
+  <clazz name="Restaurant" has="//@clazz.10">
+    <attributes name="availability" type="string"/>
+    <attributes name="Reservation: "/>
+  </clazz>
+  <clazz name="Guest">
+    <attributes name="personalData" type="tuple"/>
+    <attributes name="checkIn" type="Date"/>
+  </clazz>
+  <clazz name="Tasks">
+    <attributes name="status: " type="int"/>
+    <attributes name="maintenance"/>
+    <attributes name="description" type="String"/>
+  </clazz>
+  <clazz name="Food">
+    <attributes name="name" type="String"/>
+    <attributes name="preparationTime" type="int"/>
+  </clazz>
+  <clazz name="Receptionist">
+    <attributes name="id" type="String"/>
+    <attributes name="speciality" type="String"/>
+  </clazz>
+  <clazz name="Cook" isMember="//@clazz.5"/>
+  <association source="//@clazz.0" target="//@clazz.1"/>
+  <association source="//@clazz.0" target="//@clazz.5"/>
+  <association source="//@clazz.0" target="//@clazz.6"/>
+  <association source="//@clazz.6" target="//@clazz.1"/>
+  <association source="//@clazz.0" target="//@clazz.7"/>
+</metamodel:Model>

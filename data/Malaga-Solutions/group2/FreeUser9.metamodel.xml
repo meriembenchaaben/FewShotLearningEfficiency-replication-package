@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.3"/>
+  <operation name="P" type="association" source="//@clazz.2" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.4"/>
+  <operation name="h" type="association" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="p" type="association" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.4"/>
+  <operation name="est" type="association" source="//@clazz.7" target="//@clazz.5"/>
+  <clazz name="Delivery" generalizes="//@clazz.3">
+    <attributes name="date" type="Date"/>
+    <attributes name="description" type="String"/>
+  </clazz>
+  <clazz name="Suscription" generalizes="//@clazz.2">
+    <attributes name="cost" type="double"/>
+    <attributes name="duration" type="int"/>
+    <attributes name="paymentMethod" type="String"/>
+    <attributes name="endDate" type="Date"/>
+    <attributes name="iban" type="String"/>
+    <attributes name="startDate" type="Date"/>
+  </clazz>
+  <clazz name="Payment" specializes="//@clazz.1" has="//@clazz.7">
+    <attributes name="date" type="Date"/>
+  </clazz>
+  <clazz name="Product" generalizes="//@clazz.8" specializes="//@clazz.0" has="//@clazz.6">
+    <attributes name="category : String" type="String"/>
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="Magazine" isMember="//@clazz.8">
+    <attributes name="date : Date" type="Date"/>
+    <attributes name="title : String" type="String"/>
+    <attributes name="author : String" type="String"/>
+  </clazz>
+  <clazz name="Client">
+    <attributes name="email" type="String"/>
+  </clazz>
+  <clazz name="Collection" isMember="//@clazz.3">
+    <attributes name="surname : String" type="String"/>
+    <attributes name="name : String" type="String"/>
+  </clazz>
+  <clazz name="Receipt" isMember="//@clazz.2"/>
+  <clazz name="Copy" specializes="//@clazz.3" has="//@clazz.4">
+    <attributes name="id" type="String"/>
+  </clazz>
+  <clazzcondidate name="material" confidence="1"/>
+  <clazzcondidate name="pago" confidence="2"/>
+  <clazzcondidate name="estudiante" confidence="1"/>
+  <clazzcondidate name="Solicit" confidence="1"/>
+  <clazzcondidate name="recibo" confidence="1"/>
+  <clazzcondidate name="factura" confidence="1"/>
+  <clazzcondidate name="cotizacin" confidence="1"/>
+  <clazzcondidate name="garant" confidence="1"/>
+  <clazzcondidate name="garanta" confidence="1"/>
+  <clazzcondidate name="comentario" confidence="1"/>
+  <clazzcondidate name="cliente" confidence="1"/>
+  <clazzcondidate name="lector" confidence="1"/>
+  <clazzcondidate name="empresa" confidence="1"/>
+  <clazzcondidate name="lib" confidence="1"/>
+  <clazzcondidate name="librera" confidence="1"/>
+  <clazzcondidate name="prestamo" confidence="1"/>
+  <clazzcondidate name="customer" confidence="1"/>
+  <clazzcondidate name="gerente" confidence="1"/>
+  <association name="ti" source="//@clazz.5" target="//@clazz.1"/>
+  <association source="//@clazz.1" target="//@clazz.0"/>
+  <association name=" sus " source="//@clazz.5" target="//@clazz.4"/>
+</metamodel:Model>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.2" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.5"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.2"/>
+  <clazz name="DTMC" has="//@clazz.1 //@clazz.4"/>
+  <clazz name="State" generalizes="//@clazz.2 //@clazz.3" isMember="//@clazz.0">
+    <attributes name="id" type="String"/>
+  </clazz>
+  <clazz name="FinalState" specializes="//@clazz.1"/>
+  <clazz name="InitialState" specializes="//@clazz.1"/>
+  <clazz name="Transition" isMember="//@clazz.0">
+    <attributes name="label: String"/>
+  </clazz>
+  <clazz name="Update">
+    <attributes name="Probability: Float"/>
+  </clazz>
+  <clazzcondidate name="transition" confidence="5"/>
+  <clazzcondidate name="state" confidence="1"/>
+  <clazzcondidate name="startstate" confidence="1"/>
+  <clazzcondidate name="endstate" confidence="1"/>
+  <clazzcondidate name="action" confidence="1"/>
+  <clazzcondidate name="uml" confidence="1"/>
+  <clazzcondidate name="uml" confidence="1"/>
+  <clazzcondidate name="action" confidence="1"/>
+  <clazzcondidate name="region" confidence="1"/>
+  <clazzcondidate name="statemachine" confidence="1"/>
+  <clazzcondidate name="umlstate" confidence="1"/>
+  <clazzcondidate name="guard" confidence="1"/>
+  <clazzcondidate name="probability" confidence="1"/>
+  <clazzcondidate name="event" confidence="1"/>
+  <clazzcondidate name="time" confidence="1"/>
+  <association source="//@clazz.4" target="//@clazz.5"/>
+  <association source="//@clazz.5" target="//@clazz.1"/>
+</metamodel:Model>

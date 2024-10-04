@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Catalog" specializes="//@clazz.6" has="//@clazz.1">
+    <attributes name="description" type="String"/>
+    <attributes name="name" type="String"/>
+    <attributes name="quantity" type="double"/>
+  </clazz>
+  <clazz name="Product" isMember="//@clazz.0">
+    <attributes name="id"/>
+    <attributes name="description"/>
+    <attributes name="image"/>
+    <attributes name="pricing"/>
+    <attributes name="availability"/>
+  </clazz>
+  <clazz name="Order" generalizes="//@clazz.3" specializes="//@clazz.5">
+    <attributes name="starting date"/>
+    <attributes name="end date"/>
+    <attributes name="deescription"/>
+  </clazz>
+  <clazz name="shipment" generalizes="//@clazz.6" specializes="//@clazz.2">
+    <attributes name="arrivalDate" type="Date"/>
+    <attributes name="shippingDate" type="Date"/>
+  </clazz>
+  <clazz name="return" specializes="//@clazz.6">
+    <attributes name="dose" type="double"/>
+    <attributes name="id" type="String"/>
+  </clazz>
+  <clazz name="payment" generalizes="//@clazz.2">
+    <attributes name="paymentDate" type="Date"/>
+  </clazz>
+  <clazz name="Customer" generalizes="//@clazz.0 //@clazz.4" specializes="//@clazz.3" isMember="//@clazz.7">
+    <attributes name="gender" type="String"/>
+  </clazz>
+  <clazz name="Address" has="//@clazz.6">
+    <attributes name="id" type="int"/>
+    <attributes name="street" type="String"/>
+  </clazz>
+  <association source="//@clazz.1" target="//@clazz.2"/>
+  <association name=" Places " source="//@clazz.2" target="//@clazz.6"/>
+  <association name=" purchases " source="//@clazz.1" target="//@clazz.6"/>
+  <association source="//@clazz.5" target="//@clazz.6"/>
+</metamodel:Model>

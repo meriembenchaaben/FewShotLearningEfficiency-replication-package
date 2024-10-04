@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Account"/>
+  <clazz name="Channel" generalizes="//@clazz.2">
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="ATM" specializes="//@clazz.1">
+    <attributes name="bankName" type="String"/>
+    <attributes name="transactionType" type="String"/>
+  </clazz>
+  <clazz name="Transaction">
+    <attributes name="category" type="String"/>
+    <attributes name="date" type="Date"/>
+    <attributes name="accountNumber" type="int"/>
+    <attributes name="balance" type="double"/>
+    <attributes name="time" type="Date"/>
+  </clazz>
+  <clazz name="Withdrawal">
+    <attributes name="amount" type="double"/>
+    <attributes name="city" type="String"/>
+    <attributes name="state" type="String"/>
+  </clazz>
+  <clazz name="Deposit"/>
+  <clazz name="Transfer"/>
+  <clazz name="Employee">
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Customer">
+    <attributes name="id" type="int"/>
+  </clazz>
+  <association name=" is " source="//@clazz.0" target="//@clazz.8"/>
+</metamodel:Model>

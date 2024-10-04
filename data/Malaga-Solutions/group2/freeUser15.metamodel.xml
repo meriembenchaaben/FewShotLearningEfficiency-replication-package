@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.0"/>
+  <operation name="has" type="association" source="//@clazz.7" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.7" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.7" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.7"/>
+  <clazz name="University"/>
+  <clazz name="Student"/>
+  <clazz name="Department"/>
+  <clazz name="Course"/>
+  <clazz name="Subject"/>
+  <clazz name="Professor"/>
+  <clazz name="Room"/>
+  <clazz name="Timetable"/>
+  <clazzcondidate name="professor" confidence="5"/>
+  <clazzcondidate name="department" confidence="2"/>
+  <clazzcondidate name="student" confidence="1"/>
+  <clazzcondidate name="course" confidence="3"/>
+  <clazzcondidate name="lecture" confidence="2"/>
+  <clazzcondidate name="laboratory" confidence="1"/>
+  <clazzcondidate name="textbook" confidence="1"/>
+  <clazzcondidate name="timetable" confidence="1"/>
+  <clazzcondidate name="class" confidence="1"/>
+  <association name="offers" source="//@clazz.0" target="//@clazz.3"/>
+  <association name="isDividedIn" source="//@clazz.0" target="//@clazz.2"/>
+  <association source="//@clazz.3" target="//@clazz.4"/>
+  <association source="//@clazz.1" target="//@clazz.4"/>
+  <association name="teaches" source="//@clazz.5" target="//@clazz.4"/>
+  <association source="//@clazz.4" target="//@clazz.6"/>
+  <association source="//@clazz.3" target="//@clazz.7"/>
+  <association source="//@clazz.0" target="//@clazz.1"/>
+  <association source="//@clazz.0" target="//@clazz.5"/>
+  <association source="//@clazz.5" target="//@clazz.2"/>
+</metamodel:Model>

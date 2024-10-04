@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Bank" has="//@clazz.2 //@clazz.11 //@clazz.6"/>
+  <clazz name="Customer" specializes="//@clazz.11"/>
+  <clazz name="CommunicationChannel" generalizes="//@clazz.5 //@clazz.4 //@clazz.3" isMember="//@clazz.0">
+    <attributes name="communicationMode" type="String"/>
+  </clazz>
+  <clazz name="ATM" specializes="//@clazz.2">
+    <attributes name="location" type="String"/>
+  </clazz>
+  <clazz name="WebApp" specializes="//@clazz.2"/>
+  <clazz name="PhoneApp" specializes="//@clazz.2"/>
+  <clazz name="Transaction" generalizes="//@clazz.9 //@clazz.8 //@clazz.7" isMember="//@clazz.0">
+    <attributes name="amount" type="Real"/>
+    <attributes name="date" type="Date"/>
+  </clazz>
+  <clazz name="Withdrawal" specializes="//@clazz.6"/>
+  <clazz name="Deposit" specializes="//@clazz.6">
+    <attributes name="type" type="String"/>
+  </clazz>
+  <clazz name="Transfer" specializes="//@clazz.6">
+    <attributes name="toAccount" type="String"/>
+  </clazz>
+  <clazz name="Employee" specializes="//@clazz.11"/>
+  <clazz name="Person" generalizes="//@clazz.10 //@clazz.1" isMember="//@clazz.0">
+    <attributes name="id" type="String"/>
+    <attributes name="name" type="String"/>
+    <attributes name="age" type="int"/>
+  </clazz>
+  <clazz name="Account">
+    <attributes name="balance" type="Real"/>
+    <attributes name="accountHolderName" type="String"/>
+    <attributes name="accountNumber" type="float"/>
+    <attributes name="accountType" type="String"/>
+  </clazz>
+  <clazz name="Checking">
+    <attributes name="accountNumber" type="String"/>
+  </clazz>
+  <clazz name="Credit">
+    <attributes name="amount" type="double"/>
+  </clazz>
+  <clazz name="Debit"/>
+  <clazz name="Loan"/>
+  <clazz name="Savings">
+    <attributes name="amount" type="String"/>
+    <attributes name="date" type="Date"/>
+    <attributes name="savingsType" type="String"/>
+  </clazz>
+  <association source="//@clazz.1" target="//@clazz.6"/>
+  <association source="//@clazz.1" target="//@clazz.12"/>
+</metamodel:Model>

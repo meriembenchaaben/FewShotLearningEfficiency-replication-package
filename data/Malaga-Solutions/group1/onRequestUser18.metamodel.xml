@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="ships" type="association" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="is" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <clazz name="Customer">
+    <attributes name="id:String"/>
+  </clazz>
+  <clazz name="Order" has="//@clazz.2">
+    <attributes name="id: String"/>
+    <attributes name="orderDate" type="Date"/>
+    <attributes name="orderStatus" type="String"/>
+    <attributes name="orderTime" type="Date"/>
+    <attributes name="orderType" type="String"/>
+  </clazz>
+  <clazz name="Product" isMember="//@clazz.1"/>
+  <clazz name="Payment">
+    <attributes name="id: String"/>
+    <attributes name="price:float"/>
+  </clazz>
+  <clazz name="Shipping"/>
+  <clazzcondidate name="bank" confidence="1"/>
+  <clazzcondidate name="loan" confidence="2"/>
+  <clazzcondidate name="Product" confidence="2"/>
+  <clazzcondidate name="saving" confidence="1"/>
+  <clazzcondidate name="supplier" confidence="1"/>
+  <clazzcondidate name="sales" confidence="2"/>
+  <clazzcondidate name="returns" confidence="2"/>
+  <association source="//@clazz.0" target="//@clazz.1"/>
+  <association lowerBound="1" source="//@clazz.1" target="//@clazz.3" upperBound="1"/>
+  <association name=" buys " source="//@clazz.2" target="//@clazz.0"/>
+  <association source="//@clazz.1" target="//@clazz.4"/>
+</metamodel:Model>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="has" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="helps" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <clazz name="Customer"/>
+  <clazz name="Bank"/>
+  <clazz name="Account" generalizes="//@clazz.3 //@clazz.4"/>
+  <clazz name="Saving" specializes="//@clazz.2"/>
+  <clazz name="Loan" specializes="//@clazz.2"/>
+  <clazzcondidate name="bank" confidence="1"/>
+  <clazzcondidate name="party" confidence="2"/>
+  <clazzcondidate name="contactmethod" confidence="2"/>
+  <clazzcondidate name="account" confidence="2"/>
+  <clazzcondidate name="saving" confidence="2"/>
+  <clazzcondidate name="loan" confidence="3"/>
+  <clazzcondidate name="financialrepresent" confidence="1"/>
+  <clazzcondidate name="paymentdetails" confidence="1"/>
+  <clazzcondidate name="financialrepresentative" confidence="1"/>
+  <association name="has" source="//@clazz.2" target="//@clazz.0"/>
+  <association source="//@clazz.1" target="//@clazz.2"/>
+  <association source="//@clazz.1" target="//@clazz.0"/>
+</metamodel:Model>

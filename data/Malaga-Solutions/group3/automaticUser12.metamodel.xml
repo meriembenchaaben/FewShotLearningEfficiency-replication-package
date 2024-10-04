@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="S" type="association" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="makes" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="buys" type="association" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <clazz name="OnlineShop" has="//@clazz.2"/>
+  <clazz name="Product"/>
+  <clazz name="Order" has="//@clazz.3" isMember="//@clazz.0">
+    <attributes/>
+  </clazz>
+  <clazz name="Payment" isMember="//@clazz.2"/>
+  <clazz name="Customer">
+    <attributes/>
+  </clazz>
+  <clazzcondidate name="order" confidence="2"/>
+  <clazzcondidate name="product" confidence="1"/>
+  <clazzcondidate name="customer" confidence="3"/>
+  <clazzcondidate name="payment" confidence="1"/>
+  <clazzcondidate name="shipping" confidence="1"/>
+  <clazzcondidate name="billingaddress" confidence="1"/>
+  <clazzcondidate name="shippingaddress" confidence="1"/>
+  <association source="//@clazz.1" target="//@clazz.2"/>
+  <association source="//@clazz.4" target="//@clazz.2"/>
+</metamodel:Model>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="composition" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="purchases" type="association" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="places" type="association" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.4"/>
+  <clazz name="Product">
+    <attributes name="name" type="String"/>
+    <attributes name="description" type="String"/>
+    <attributes name="image" type="Image"/>
+    <attributes name="price" type="Integer"/>
+    <attributes name="currentStock" type="Integer"/>
+  </clazz>
+  <clazz name="Image"/>
+  <clazz name="Purchase">
+    <attributes name="shipmentStatus" type="String"/>
+    <attributes name="paymentStatus" type="String"/>
+    <attributes name="deliveryAddress" type="String"/>
+    <attributes name="deliveryDate" type="Date"/>
+  </clazz>
+  <clazz name="Date"/>
+  <clazz name="Payment">
+    <attributes name="paymentType" type="String"/>
+  </clazz>
+  <clazz name="Customer">
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazzcondidate name="inventoryitem" confidence="1"/>
+  <clazzcondidate name="warehouse" confidence="1"/>
+  <clazzcondidate name="sale" confidence="1"/>
+  <clazzcondidate name="comment" confidence="1"/>
+  <clazzcondidate name="purchase" confidence="1"/>
+  <clazzcondidate name="location" confidence="1"/>
+  <clazzcondidate name="store" confidence="1"/>
+  <clazzcondidate name="review" confidence="1"/>
+  <clazzcondidate name="inventory" confidence="1"/>
+  <clazzcondidate name="account" confidence="1"/>
+  <clazzcondidate name="payment" confidence="1"/>
+  <clazzcondidate name="phonenumber" confidence="2"/>
+  <clazzcondidate name="email" confidence="2"/>
+  <clazzcondidate name="address" confidence="2"/>
+  <clazzcondidate name="customer" confidence="1"/>
+  <association name="buys" source="//@clazz.2" target="//@clazz.0"/>
+  <association name="payedWith" source="//@clazz.2" target="//@clazz.4"/>
+  <association name="makes" source="//@clazz.5" target="//@clazz.2"/>
+</metamodel:Model>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.1" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.4"/>
+  <operation name="is" type="association" source="//@clazz.0" target="//@clazz.5"/>
+  <operation name="" type="composition" source="//@clazz.5" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.6"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.5"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.7" target="//@clazz.6"/>
+  <operation name="Is" type="association" source="//@clazz.0" target="//@clazz.8"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.8"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.6"/>
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.9"/>
+  <operation name="" type="inheritance" source="//@clazz.1" target="//@clazz.9"/>
+  <operation name="" type="composition" source="//@clazz.9" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.9" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.9" target="//@clazz.8"/>
+  <clazz name="ASTNode" has="//@clazz.2 //@clazz.1 //@clazz.3 //@clazz.9"/>
+  <clazz name="VariableDeclaration" isMember="//@clazz.0">
+    <attributes name="identifier" type="Srtring"/>
+    <attributes name=""/>
+  </clazz>
+  <clazz name="Function" has="//@clazz.5" isMember="//@clazz.0"/>
+  <clazz name="ClassDeclaration" isMember="//@clazz.0"/>
+  <clazz name="Methoddeclaration"/>
+  <clazz name="Parameter" isMember="//@clazz.2"/>
+  <clazz name="Scope"/>
+  <clazz name="Datatype"/>
+  <clazz name="SemanticValue"/>
+  <clazz name="Assigment" isMember="//@clazz.0"/>
+  <clazzcondidate name="java" confidence="1"/>
+  <clazzcondidate name="c" confidence="1"/>
+  <clazzcondidate name="softwaredevelopment" confidence="1"/>
+  <clazzcondidate name="operation" confidence="1"/>
+  <clazzcondidate name="class" confidence="1"/>
+  <clazzcondidate name="interface" confidence="2"/>
+  <clazzcondidate name="interfacedeclaration" confidence="1"/>
+  <clazzcondidate name="methoddeclaration" confidence="2"/>
+  <clazzcondidate name="constructor" confidence="1"/>
+  <clazzcondidate name="packagedeclaration" confidence="1"/>
+  <clazzcondidate name="modifier" confidence="2"/>
+  <clazzcondidate name="datatype" confidence="1"/>
+  <clazzcondidate name="typecheck" confidence="1"/>
+  <clazzcondidate name="inheritance" confidence="1"/>
+  <clazzcondidate name="returnstatement" confidence="1"/>
+  <association source="//@clazz.1" target="//@clazz.6"/>
+  <association source="//@clazz.1" target="//@clazz.7"/>
+  <association source="//@clazz.9" target="//@clazz.8"/>
+</metamodel:Model>

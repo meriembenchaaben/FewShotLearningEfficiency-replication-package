@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Customer" has="//@clazz.1" isMember="//@clazz.3">
+    <attributes name="id" type="String"/>
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Transaction" isMember="//@clazz.0">
+    <attributes name="id" type="String"/>
+    <attributes name="withdrawType" type="String"/>
+    <attributes name="amountWithdraw" type="double"/>
+    <attributes name="clientName" type="String"/>
+  </clazz>
+  <clazz name="ATM">
+    <attributes name="id" type="String"/>
+    <attributes name="pinNumber" type="int"/>
+    <attributes name="withdrawLimit" type="double"/>
+  </clazz>
+  <clazz name="Institution" has="//@clazz.0 //@clazz.4 //@clazz.5">
+    <attributes name="id" type="String"/>
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Employee" isMember="//@clazz.3">
+    <attributes name="id" type="String"/>
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Account" isMember="//@clazz.3">
+    <attributes name="id" type="String"/>
+    <attributes name="name" type="String"/>
+    <attributes name="type" type="String"/>
+  </clazz>
+  <association source="//@clazz.2" target="//@clazz.1"/>
+  <association source="//@clazz.0" target="//@clazz.5"/>
+</metamodel:Model>

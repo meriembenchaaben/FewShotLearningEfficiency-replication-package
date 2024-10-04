@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.2"/>
+  <operation name="uses" type="association" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.4"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.5"/>
+  <clazz name="School">
+    <attributes name="address" type="String"/>
+    <attributes name="country" type="String"/>
+    <attributes name="id" type="String"/>
+    <attributes name="name" type="String"/>
+    <attributes name="state" type="String"/>
+    <attributes name="zipCode" type="String"/>
+  </clazz>
+  <clazz name="Teacher" specializes="//@clazz.5">
+    <attributes name="id" type="String"/>
+    <attributes name="level" type="String"/>
+  </clazz>
+  <clazz name="Class" specializes="//@clazz.3">
+    <attributes name="Id"/>
+  </clazz>
+  <clazz name="Student" generalizes="//@clazz.2">
+    <attributes name="name" type="String"/>
+    <attributes name="year"/>
+  </clazz>
+  <clazz name="Course">
+    <attributes name="grado"/>
+  </clazz>
+  <clazz name="Subject" generalizes="//@clazz.1">
+    <attributes name="Id"/>
+    <attributes name="Name"/>
+  </clazz>
+  <clazz name="Material">
+    <attributes name="id"/>
+    <attributes name="nombre"/>
+    <attributes/>
+  </clazz>
+  <clazzcondidate name="art" confidence="1"/>
+  <clazzcondidate name="chemistry" confidence="1"/>
+  <clazzcondidate name="biology" confidence="1"/>
+  <clazzcondidate name="history" confidence="1"/>
+  <clazzcondidate name="sale" confidence="1"/>
+  <clazzcondidate name="purchase" confidence="1"/>
+  <clazzcondidate name="customer" confidence="1"/>
+  <clazzcondidate name="stock" confidence="1"/>
+  <clazzcondidate name="course" confidence="2"/>
+  <clazzcondidate name="teacher" confidence="1"/>
+  <clazzcondidate name="student" confidence="3"/>
+  <clazzcondidate name="player" confidence="1"/>
+  <clazzcondidate name="class" confidence="1"/>
+  <clazzcondidate name="team" confidence="1"/>
+  <clazzcondidate name="grade" confidence="4"/>
+  <association name="Works" source="//@clazz.0" target="//@clazz.1"/>
+  <association source="//@clazz.2" target="//@clazz.1"/>
+  <association source="//@clazz.2" target="//@clazz.4"/>
+  <association source="//@clazz.4" target="//@clazz.5"/>
+</metamodel:Model>

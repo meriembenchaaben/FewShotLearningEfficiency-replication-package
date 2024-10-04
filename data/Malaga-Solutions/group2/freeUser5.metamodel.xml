@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.1"/>
+  <clazz name="student">
+    <attributes name="id" type="String"/>
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Grade">
+    <attributes name=" value"/>
+  </clazz>
+  <clazz name="Course">
+    <attributes name="id" type="int"/>
+    <attributes name="name: string"/>
+  </clazz>
+  <clazz name="teacher">
+    <attributes name="id" type="String"/>
+    <attributes name="name" type="String"/>
+    <attributes name="speciality" type="String"/>
+  </clazz>
+  <clazzcondidate name="grade" confidence="1"/>
+  <clazzcondidate name="course" confidence="1"/>
+  <clazzcondidate name="lecture" confidence="1"/>
+  <clazzcondidate name="class" confidence="1"/>
+  <clazzcondidate name="section" confidence="1"/>
+  <clazzcondidate name="university" confidence="1"/>
+  <clazzcondidate name="department" confidence="1"/>
+  <association name="t" source="//@clazz.2" target="//@clazz.0"/>
+  <association source="//@clazz.3" target="//@clazz.2"/>
+  <association source="//@clazz.2" target="//@clazz.1"/>
+  <association source="//@clazz.0" target="//@clazz.1"/>
+</metamodel:Model>

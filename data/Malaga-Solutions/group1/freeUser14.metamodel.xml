@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="composition" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <clazz name="Farm" has="//@clazz.1 //@clazz.3">
+    <attributes name="farmId" type="String"/>
+  </clazz>
+  <clazz name="Stable" has="//@clazz.2" isMember="//@clazz.0">
+    <attributes name="capacity" type="float"/>
+    <attributes name="costPeriod" type="double"/>
+  </clazz>
+  <clazz name="Animal" isMember="//@clazz.1">
+    <attributes name="id" type="String"/>
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Crop" isMember="//@clazz.0">
+    <attributes name="id" type="String"/>
+    <attributes name="Fertility" type="float"/>
+  </clazz>
+  <clazz name="HeatlhRevision">
+    <attributes name="revisionId" type="String"/>
+    <attributes name="type" type="String"/>
+    <attributes name="revisionDate" type="Date"/>
+  </clazz>
+  <clazzcondidate name="crop" confidence="3"/>
+  <clazzcondidate name="liv" confidence="1"/>
+  <clazzcondidate name="field" confidence="1"/>
+  <clazzcondidate name="equipment" confidence="1"/>
+  <clazzcondidate name="plant" confidence="1"/>
+  <clazzcondidate name="farmer" confidence="1"/>
+  <clazzcondidate name="animal" confidence="2"/>
+  <clazzcondidate name="food" confidence="1"/>
+  <clazzcondidate name="Cow" confidence="1"/>
+  <clazzcondidate name="Zoo" confidence="1"/>
+  <clazzcondidate name="Exhibit" confidence="1"/>
+  <clazzcondidate name="Livestock" confidence="2"/>
+  <clazzcondidate name="garden" confidence="1"/>
+  <clazzcondidate name="owner" confidence="1"/>
+  <clazzcondidate name="employee" confidence="1"/>
+  <association name="eatFrom" source="//@clazz.2" target="//@clazz.3"/>
+  <association source="//@clazz.2" target="//@clazz.4"/>
+</metamodel:Model>

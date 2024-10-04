@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Hotel"/>
+  <clazz name="Room">
+    <attributes name="roomType" type="String"/>
+    <attributes name="hotelName" type="String"/>
+    <attributes name="price" type="int"/>
+    <attributes name="roomNumber" type="String"/>
+  </clazz>
+  <clazz/>
+  <clazz name="Person">
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Role" generalizes="//@clazz.6 //@clazz.5"/>
+  <clazz name="Guest" specializes="//@clazz.4"/>
+  <clazz name="Staff" specializes="//@clazz.4"/>
+  <clazz name="RoomReservation">
+    <attributes name="checkIn" type="String"/>
+    <attributes name="checkOut" type="String"/>
+  </clazz>
+  <clazz name="Restaurant"/>
+  <clazz name="RestaurantReservation">
+    <attributes name="OnDay" type="String"/>
+    <attributes name="atTime" type="String"/>
+  </clazz>
+  <clazz name="Beverage"/>
+  <clazz name="Food"/>
+  <association name="plays" source="//@clazz.3" target="//@clazz.4"/>
+  <association name="rooms" source="//@clazz.0" target="//@clazz.1"/>
+  <association name="makes" source="//@clazz.5" target="//@clazz.7"/>
+  <association name="for" source="//@clazz.7" target="//@clazz.1"/>
+  <association name="occupies" source="//@clazz.5" target="//@clazz.1"/>
+  <association name="restaurants" source="//@clazz.0" target="//@clazz.8"/>
+  <association name="for" source="//@clazz.9" target="//@clazz.8"/>
+  <association name="reservesRestaurant" source="//@clazz.5" target="//@clazz.9"/>
+</metamodel:Model>

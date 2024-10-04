@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.1" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="is" type="association" source="//@clazz.2" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="contains" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="covers" type="association" source="//@clazz.5" target="//@clazz.4"/>
+  <clazz name="Product" isMember="//@clazz.1">
+    <attributes name="description" type="String"/>
+    <attributes name="price" type="double"/>
+    <attributes name="availability: boolean"/>
+  </clazz>
+  <clazz name="Catalog" has="//@clazz.0"/>
+  <clazz name="Order" isMember="//@clazz.5"/>
+  <clazz name="Image"/>
+  <clazz name="Shipment">
+    <attributes name="status" type="String"/>
+    <attributes name="deliveryDate" type="Date"/>
+    <attributes name="shippingCompany" type="String"/>
+  </clazz>
+  <clazz name="Payment" has="//@clazz.2"/>
+  <clazzcondidate name="order" confidence="2"/>
+  <clazzcondidate name="customer" confidence="6"/>
+  <clazzcondidate name="Role" confidence="1"/>
+  <clazzcondidate name="Service" confidence="1"/>
+  <clazzcondidate name="Organization" confidence="1"/>
+  <clazzcondidate name="Location" confidence="1"/>
+  <clazzcondidate name="manufacturer" confidence="3"/>
+  <clazzcondidate name="supplier" confidence="3"/>
+  <clazzcondidate name="inventory" confidence="3"/>
+  <clazzcondidate name="ShoppingCart" confidence="1"/>
+  <clazzcondidate name="line" confidence="1"/>
+  <clazzcondidate name="address" confidence="1"/>
+  <clazzcondidate name="LineItem" confidence="1"/>
+  <clazzcondidate name="Warehouse" confidence="2"/>
+  <clazzcondidate name="Stock" confidence="1"/>
+  <clazzcondidate name="contact" confidence="1"/>
+  <association source="//@clazz.3" target="//@clazz.0"/>
+  <association source="//@clazz.0" target="//@clazz.2"/>
+  <association source="//@clazz.2" target="//@clazz.4"/>
+</metamodel:Model>

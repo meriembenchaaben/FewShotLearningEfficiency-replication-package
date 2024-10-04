@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="composition" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="employs" type="association" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="plays" type="association" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.7" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.1"/>
+  <operation name="owns" type="association" source="//@clazz.7" target="//@clazz.2"/>
+  <operation name="Le" type="association" source="//@clazz.7" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.7" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.7" target="//@clazz.6"/>
+  <clazz name="League" has="//@clazz.4">
+    <attributes name="division" type="Division"/>
+  </clazz>
+  <clazz name="Player">
+    <attributes name="name" type="String"/>
+    <attributes name="nationality" type="string"/>
+  </clazz>
+  <clazz name="Stadium">
+    <attributes name="capacity" type="int"/>
+  </clazz>
+  <clazz name="City"/>
+  <clazz name="Team" isMember="//@clazz.0">
+    <attributes name="name" type="String"/>
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="Staff" generalizes="//@clazz.6">
+    <attributes name="name" type="String"/>
+    <attributes name="employmentStartDate" type="Date"/>
+  </clazz>
+  <clazz name="Manager" specializes="//@clazz.5"/>
+  <clazz name="President"/>
+  <clazzcondidate name="player" confidence="1"/>
+  <clazzcondidate name="captain" confidence="1"/>
+  <clazzcondidate name="coach" confidence="6"/>
+  <clazzcondidate name="city" confidence="1"/>
+  <clazzcondidate name="team" confidence="1"/>
+  <clazzcondidate name="game" confidence="1"/>
+  <clazzcondidate name="schedule" confidence="1"/>
+  <clazzcondidate name="country" confidence="1"/>
+  <clazzcondidate name="division" confidence="1"/>
+  <clazzcondidate name="season" confidence="1"/>
+  <clazzcondidate name="match" confidence="1"/>
+  <clazzcondidate name="conferenceowner" confidence="1"/>
+  <clazzcondidate name="pet" confidence="1"/>
+  <clazzcondidate name="referee" confidence="1"/>
+  <clazzcondidate name="fan" confidence="1"/>
+  <clazzcondidate name="owner" confidence="1"/>
+  <clazzcondidate name="chairman" confidence="1"/>
+  <association name=" plays " source="//@clazz.1" target="//@clazz.4"/>
+  <association source="//@clazz.4" target="//@clazz.2"/>
+  <association source="//@clazz.3" target="//@clazz.4"/>
+  <association source="//@clazz.4" target="//@clazz.5"/>
+  <association source="//@clazz.4" target="//@clazz.7"/>
+</metamodel:Model>

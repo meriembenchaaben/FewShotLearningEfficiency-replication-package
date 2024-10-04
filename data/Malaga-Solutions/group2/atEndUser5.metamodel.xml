@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Customer">
+    <attributes name="id"/>
+    <attributes name="name"/>
+  </clazz>
+  <clazz name="Product" isMember="//@clazz.2">
+    <attributes name="description: String"/>
+    <attributes name="image : Image "/>
+    <attributes name="price"/>
+    <attributes name="isAvakiable: boolean"/>
+  </clazz>
+  <clazz name="Order" has="//@clazz.1"/>
+  <clazz name="Shipment">
+    <attributes name="cost" type="float"/>
+    <attributes name="shippingDate" type="Date"/>
+  </clazz>
+  <clazz name="Payment">
+    <attributes name="nameOnCard" type="String"/>
+    <attributes name="type" type="String"/>
+    <attributes name="zipCode" type="String"/>
+  </clazz>
+  <clazz name="Account">
+    <attributes name="email" type="String"/>
+    <attributes name="updatedAt" type="Date"/>
+  </clazz>
+  <association source="//@clazz.2" target="//@clazz.4"/>
+  <association source="//@clazz.2" target="//@clazz.3"/>
+  <association source="//@clazz.0" target="//@clazz.2"/>
+  <association name=" is " source="//@clazz.5" target="//@clazz.0"/>
+</metamodel:Model>

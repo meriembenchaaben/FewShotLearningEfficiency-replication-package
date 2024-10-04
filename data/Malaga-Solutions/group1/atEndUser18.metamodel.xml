@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <clazz name="Customer" specializes="//@clazz.3">
+    <attributes name="lastName" type="String"/>
+  </clazz>
+  <clazz name="Account" isMember="//@clazz.2">
+    <attributes name="id: String"/>
+    <attributes name="type: String"/>
+    <attributes name="balanceNumber" type="String"/>
+    <attributes name="bicString" type="String"/>
+    <attributes name="currencyString" type="String"/>
+  </clazz>
+  <clazz name="Bank" has="//@clazz.1">
+    <attributes name="id: String"/>
+    <attributes name="nameString" type="String"/>
+  </clazz>
+  <clazz name="User" generalizes="//@clazz.0 //@clazz.4">
+    <attributes name="id: String"/>
+    <attributes name="name" type="String"/>
+    <attributes name="username" type="String"/>
+  </clazz>
+  <clazz name="Employee" specializes="//@clazz.3"/>
+  <clazz name="Transaction">
+    <attributes name="id: String"/>
+    <attributes name="state" type="String"/>
+  </clazz>
+  <clazz name="Payment">
+    <attributes name="amount" type="float"/>
+    <attributes name="type" type="String"/>
+  </clazz>
+  <clazz name="Product">
+    <attributes name="price" type="double"/>
+  </clazz>
+  <clazz name="Service">
+    <attributes name="description" type="String"/>
+  </clazz>
+  <association lowerBound="1" source="//@clazz.0" target="//@clazz.1"/>
+  <association source="//@clazz.4" target="//@clazz.2"/>
+  <association lowerBound="1" source="//@clazz.5" target="//@clazz.1"/>
+  <association name=" offers " source="//@clazz.2" target="//@clazz.8"/>
+  <association name=" provides " source="//@clazz.1" target="//@clazz.8"/>
+</metamodel:Model>

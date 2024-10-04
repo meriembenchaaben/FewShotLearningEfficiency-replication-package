@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="provides" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="uses" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.5" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="owes" type="association" source="//@clazz.6" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.5"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.7" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.7" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.7" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.7" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.8" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.8" target="//@clazz.3"/>
+  <operation name="rents" type="association" source="//@clazz.8" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.6"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.7"/>
+  <operation name="" type="inheritance" source="//@clazz.9" target="//@clazz.8"/>
+  <operation name="" type="composition" source="//@clazz.8" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.8" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.8" target="//@clazz.4"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.10" target="//@clazz.5"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.6"/>
+  <operation name="" type="inheritance" source="//@clazz.10" target="//@clazz.7"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.10"/>
+  <operation name="" type="inheritance" source="//@clazz.9" target="//@clazz.10"/>
+  <operation name="" type="composition" source="//@clazz.9" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.8" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.9" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.9" target="//@clazz.3"/>
+  <operation name="cost" type="association" source="//@clazz.8" target="//@clazz.6"/>
+  <operation name="cleans" type="association" source="//@clazz.8" target="//@clazz.7"/>
+  <operation name="occupies" type="association" source="//@clazz.9" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.9" target="//@clazz.8"/>
+  <operation name="rents" type="association" source="//@clazz.9" target="//@clazz.5"/>
+  <operation name="cleans" type="association" source="//@clazz.9" target="//@clazz.7"/>
+  <operation name="" type="inheritance" source="//@clazz.10" target="//@clazz.8"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.9"/>
+  <operation name="" type="inheritance" source="//@clazz.10" target="//@clazz.9"/>
+  <operation name="" type="composition" source="//@clazz.11" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.11" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.11" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.5"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.6"/>
+  <operation name="employs" type="association" source="//@clazz.11" target="//@clazz.7"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.11"/>
+  <operation name="" type="composition" source="//@clazz.11" target="//@clazz.10"/>
+  <operation name="" type="inheritance" source="//@clazz.11" target="//@clazz.12"/>
+  <operation name="" type="inheritance" source="//@clazz.11" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.11" target="//@clazz.1"/>
+  <operation name="is" type="association" source="//@clazz.11" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.11" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.11"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.6"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.7"/>
+  <operation name="" type="composition" source="//@clazz.11" target="//@clazz.10"/>
+  <operation name="requires" type="association" source="//@clazz.11" target="//@clazz.12"/>
+  <operation name="manages" type="association" source="//@clazz.12" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.12" target="//@clazz.1"/>
+  <operation name="requires" type="association" source="//@clazz.12" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.12" target="//@clazz.3"/>
+  <operation name="assigns" type="association" source="//@clazz.12" target="//@clazz.4"/>
+  <operation name="" type="composition" source="//@clazz.12" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.12" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.12" target="//@clazz.7"/>
+  <operation name="" type="composition" source="//@clazz.12" target="//@clazz.11"/>
+  <operation name="" type="inheritance" source="//@clazz.12" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.12" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.12" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.12" target="//@clazz.3"/>
+  <operation name="assigns" type="association" source="//@clazz.12" target="//@clazz.4"/>
+  <operation name="complete" type="association" source="//@clazz.12" target="//@clazz.5"/>
+  <operation name="" type="association" source="//@clazz.12" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.12" target="//@clazz.7"/>
+  <operation name="" type="inheritance" source="//@clazz.12" target="//@clazz.10"/>
+  <clazz name="Hotel" has="//@clazz.2">
+    <attributes name="address" type="String"/>
+  </clazz>
+  <clazz name="Restaurant" has="//@clazz.3"/>
+  <clazz name="Room" generalizes="//@clazz.10 //@clazz.9 //@clazz.8" isMember="//@clazz.0">
+    <attributes name="location" type="String"/>
+    <attributes name="size" type="double"/>
+  </clazz>
+  <clazz name="Table" isMember="//@clazz.1"/>
+  <clazz name="Client">
+    <attributes name="gender" type="String"/>
+    <attributes name="homeAddress" type="String"/>
+    <attributes name="name" type="String"/>
+    <attributes name="surname" type="String"/>
+  </clazz>
+  <clazz name="Stay">
+    <attributes name="endDate" type="Date"/>
+    <attributes name="startDate" type="Date"/>
+  </clazz>
+  <clazz name="Payment">
+    <attributes name="billingAddress" type="String"/>
+  </clazz>
+  <clazz name="Staff">
+    <attributes name="speciality" type="String"/>
+  </clazz>
+  <clazz name="SingleRoom" specializes="//@clazz.2"/>
+  <clazz name="DoubleRoom" specializes="//@clazz.2"/>
+  <clazz name="Suite" specializes="//@clazz.2"/>
+  <clazz name="Work"/>
+  <clazz name="Task">
+    <attributes name="description" type="String"/>
+    <attributes name="name" type="String"/>
+    <attributes name="status" type="String"/>
+  </clazz>
+  <clazzcondidate name="lodging" confidence="1"/>
+  <clazzcondidate name="business" confidence="1"/>
+  <clazzcondidate name="table" confidence="1"/>
+  <clazzcondidate name="customer" confidence="2"/>
+  <clazzcondidate name="meal" confidence="7"/>
+  <clazzcondidate name="food" confidence="1"/>
+  <clazzcondidate name="conference" confidence="1"/>
+  <clazzcondidate name="guest" confidence="1"/>
+  <clazzcondidate name="cook" confidence="1"/>
+  <clazzcondidate name="server" confidence="1"/>
+  <clazzcondidate name="manager" confidence="1"/>
+  <clazzcondidate name="check" confidence="1"/>
+  <clazzcondidate name="dish" confidence="3"/>
+  <clazzcondidate name="menu" confidence="1"/>
+  <clazzcondidate name="m" confidence="1"/>
+  <clazzcondidate name="bill" confidence="1"/>
+  <clazzcondidate name="employee" confidence="1"/>
+  <clazzcondidate name="position" confidence="2"/>
+  <clazzcondidate name="roomservice" confidence="1"/>
+  <clazzcondidate name="doubleroom" confidence="1"/>
+  <clazzcondidate name="order" confidence="1"/>
+  <clazzcondidate name="drink" confidence="1"/>
+  <clazzcondidate name="breakfast" confidence="1"/>
+  <clazzcondidate name="dinner" confidence="1"/>
+  <clazzcondidate name="lunch" confidence="1"/>
+  <clazzcondidate name="shift" confidence="1"/>
+  <clazzcondidate name="project" confidence="1"/>
+  <association source="//@clazz.0" target="//@clazz.1"/>
+  <association source="//@clazz.5" target="//@clazz.2"/>
+  <association source="//@clazz.5" target="//@clazz.6"/>
+  <association source="//@clazz.5" target="//@clazz.4"/>
+  <association source="//@clazz.7" target="//@clazz.11"/>
+  <association source="//@clazz.11" target="//@clazz.12"/>
+</metamodel:Model>

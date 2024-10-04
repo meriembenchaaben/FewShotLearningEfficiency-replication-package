@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="is" type="association" source="//@clazz.1" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="booked" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.1" target="//@clazz.5"/>
+  <operation name="is" type="association" source="//@clazz.3" target="//@clazz.5"/>
+  <operation name="" type="composition" source="//@clazz.5" target="//@clazz.4"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.5"/>
+  <clazz name="Hotel" has="//@clazz.1 //@clazz.4"/>
+  <clazz name="Room" isMember="//@clazz.0"/>
+  <clazz name="Customer"/>
+  <clazz name="Reservation"/>
+  <clazz name="Restaurant" has="//@clazz.6" isMember="//@clazz.0"/>
+  <clazz name="Meal"/>
+  <clazz name="Table" isMember="//@clazz.4"/>
+  <clazzcondidate name="service" confidence="4"/>
+  <clazzcondidate name="customer" confidence="2"/>
+  <clazzcondidate name="room" confidence="1"/>
+  <clazzcondidate name="employee" confidence="2"/>
+  <clazzcondidate name="manager" confidence="1"/>
+  <clazzcondidate name="reservation" confidence="1"/>
+  <clazzcondidate name="meal" confidence="1"/>
+  <clazzcondidate name="breakfast" confidence="1"/>
+  <clazzcondidate name="dinner" confidence="1"/>
+  <clazzcondidate name="lunch" confidence="1"/>
+  <clazzcondidate name="bill" confidence="1"/>
+  <association source="//@clazz.1" target="//@clazz.3"/>
+  <association source="//@clazz.4" target="//@clazz.5"/>
+  <association source="//@clazz.3" target="//@clazz.2"/>
+  <association source="//@clazz.5" target="//@clazz.3"/>
+</metamodel:Model>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.0" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="Serv" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.6"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.5" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.7"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.1"/>
+  <operation name="owes" type="association" source="//@clazz.7" target="//@clazz.2"/>
+  <operation name="is" type="association" source="//@clazz.7" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.7"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.6"/>
+  <clazz name="Hotel" has="//@clazz.1"/>
+  <clazz name="Room" has="//@clazz.7" isMember="//@clazz.0">
+    <attributes name="type" type="Enum"/>
+  </clazz>
+  <clazz name="Guest">
+    <attributes name="address" type="String"/>
+    <attributes name="email" type="String"/>
+  </clazz>
+  <clazz name="Restaurant" has="//@clazz.4 //@clazz.5"/>
+  <clazz name="Food" isMember="//@clazz.3"/>
+  <clazz name="Drink" isMember="//@clazz.3"/>
+  <clazz name="Table"/>
+  <clazz name="Cost" isMember="//@clazz.1">
+    <attributes name="priceNight" type="double"/>
+  </clazz>
+  <clazzcondidate name="booking" confidence="2"/>
+  <clazzcondidate name="customer" confidence="3"/>
+  <clazzcondidate name="room" confidence="1"/>
+  <clazzcondidate name="service" confidence="4"/>
+  <clazzcondidate name="employee" confidence="1"/>
+  <clazzcondidate name="Bed" confidence="1"/>
+  <clazzcondidate name="Breakfast" confidence="1"/>
+  <clazzcondidate name="vac" confidence="1"/>
+  <clazzcondidate name="Reservation" confidence="1"/>
+  <clazzcondidate name="meal" confidence="6"/>
+  <clazzcondidate name="chef" confidence="1"/>
+  <clazzcondidate name="hotelmanager" confidence="1"/>
+  <clazzcondidate name="Table" confidence="1"/>
+  <clazzcondidate name="dish" confidence="1"/>
+  <clazzcondidate name="Bill" confidence="3"/>
+  <clazzcondidate name="Pay" confidence="1"/>
+  <clazzcondidate name="course" confidence="1"/>
+  <clazzcondidate name="employ" confidence="1"/>
+  <clazzcondidate name="order" confidence="1"/>
+  <association source="//@clazz.3" target="//@clazz.6"/>
+  <association source="//@clazz.2" target="//@clazz.1"/>
+  <association source="//@clazz.7" target="//@clazz.2"/>
+</metamodel:Model>

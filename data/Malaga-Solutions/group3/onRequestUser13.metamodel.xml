@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="makes" type="association" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="causes" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="accepts" type="association" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="At" type="association" source="//@clazz.5" target="//@clazz.4"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="makes" type="association" source="//@clazz.6" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.2"/>
+  <operation name="makes" type="association" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.5"/>
+  <clazz name="Bank">
+    <attributes name="id" type="String"/>
+    <attributes name="website" type="String"/>
+    <attributes name="telephone" type="String"/>
+  </clazz>
+  <clazz name="Customer">
+    <attributes name="id" type="String"/>
+  </clazz>
+  <clazz name="Account">
+    <attributes name="id" type="int"/>
+    <attributes name="type"/>
+  </clazz>
+  <clazz name="Transaction" generalizes="//@clazz.4 //@clazz.5 //@clazz.6">
+    <attributes name="amount" type="double"/>
+    <attributes name="id" type="String"/>
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Withdrawal" specializes="//@clazz.3"/>
+  <clazz name="Deposit" specializes="//@clazz.3"/>
+  <clazz name="Transfer" specializes="//@clazz.3"/>
+  <clazzcondidate name="account" confidence="2"/>
+  <clazzcondidate name="accountholder" confidence="1"/>
+  <clazzcondidate name="saving" confidence="1"/>
+  <clazzcondidate name="loan" confidence="5"/>
+  <clazzcondidate name="checkingaccount" confidence="1"/>
+  <clazzcondidate name="savingsaccount" confidence="1"/>
+  <clazzcondidate name="credit" confidence="1"/>
+  <clazzcondidate name="investment" confidence="1"/>
+  <clazzcondidate name="Interest" confidence="1"/>
+  <clazzcondidate name="Product" confidence="1"/>
+  <clazzcondidate name="deposit" confidence="1"/>
+  <clazzcondidate name="balance" confidence="1"/>
+  <clazzcondidate name="mortgage" confidence="1"/>
+  <association source="//@clazz.1" target="//@clazz.2"/>
+  <association source="//@clazz.1" target="//@clazz.3"/>
+  <association source="//@clazz.0" target="//@clazz.2"/>
+  <association source="//@clazz.2" target="//@clazz.3"/>
+</metamodel:Model>

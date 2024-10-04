@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="is" type="association" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="assigns" type="association" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="is" type="association" source="//@clazz.3" target="//@clazz.4"/>
+  <clazz name="Hotel">
+    <attributes name="numberOfRooms" type="int"/>
+  </clazz>
+  <clazz name="Room" isMember="//@clazz.3">
+    <attributes name="id" type="int"/>
+    <attributes name="type" type="String"/>
+  </clazz>
+  <clazz name="Guest">
+    <attributes name="surname" type="String"/>
+  </clazz>
+  <clazz name="Housekeeping task" has="//@clazz.1"/>
+  <clazz name="Reservation">
+    <attributes name="department" type="String"/>
+    <attributes name="id" type="String"/>
+    <attributes name="speciality" type="String"/>
+  </clazz>
+  <clazzcondidate name="book" confidence="1"/>
+  <clazzcondidate name="museum" confidence="1"/>
+  <clazzcondidate name="school" confidence="1"/>
+  <clazzcondidate name="service" confidence="3"/>
+  <clazzcondidate name="client" confidence="1"/>
+  <clazzcondidate name="room" confidence="1"/>
+  <clazzcondidate name="DiningRoom" confidence="1"/>
+  <clazzcondidate name="bill" confidence="2"/>
+  <clazzcondidate name="reservation" confidence="3"/>
+  <clazzcondidate name="customer" confidence="4"/>
+  <clazzcondidate name="Employee" confidence="2"/>
+  <clazzcondidate name="booking" confidence="1"/>
+  <clazzcondidate name="payment" confidence="1"/>
+  <clazzcondidate name="airline" confidence="1"/>
+  <clazzcondidate name="dining" confidence="1"/>
+  <clazzcondidate name="conceptsthatcouldbe" confidence="1"/>
+  <clazzcondidate name="Bed" confidence="1"/>
+  <clazzcondidate name="Amen" confidence="1"/>
+  <clazzcondidate name="Bathroom" confidence="1"/>
+  <association source="//@clazz.0" target="//@clazz.1"/>
+  <association source="//@clazz.0" target="//@clazz.2"/>
+  <association name=" has " source="//@clazz.1" target="//@clazz.4"/>
+</metamodel:Model>

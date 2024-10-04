@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="is" type="association" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="occupies" type="association" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.2" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.4"/>
+  <operation name="" type="composition" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.5"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.0" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.0" target="//@clazz.5"/>
+  <operation name="" type="association" source="//@clazz.0" target="//@clazz.6"/>
+  <operation name="is" type="association" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.5"/>
+  <operation name="" type="association" source="//@clazz.1" target="//@clazz.6"/>
+  <operation name="provides" type="association" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.2" target="//@clazz.6"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="rents" type="association" source="//@clazz.6" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.6"/>
+  <clazz name="Hotel" has="//@clazz.1"/>
+  <clazz name="Room" generalizes="//@clazz.3 //@clazz.4 //@clazz.5" isMember="//@clazz.0">
+    <attributes name="capacity" type="int"/>
+    <attributes name="number: int "/>
+  </clazz>
+  <clazz name="Reservation"/>
+  <clazz name="DoubleRoom" specializes="//@clazz.1"/>
+  <clazz name="SingleRoom" specializes="//@clazz.1"/>
+  <clazz name="Suite" specializes="//@clazz.1"/>
+  <clazz name="Guest"/>
+  <clazzcondidate name="res" confidence="1"/>
+  <clazzcondidate name="manager" confidence="1"/>
+  <clazzcondidate name="guest" confidence="2"/>
+  <clazzcondidate name="service" confidence="1"/>
+  <clazzcondidate name="reservation" confidence="1"/>
+  <clazzcondidate name="customer" confidence="5"/>
+  <clazzcondidate name="trip" confidence="1"/>
+  <clazzcondidate name="singleroom" confidence="1"/>
+  <clazzcondidate name="creditcard" confidence="1"/>
+</metamodel:Model>

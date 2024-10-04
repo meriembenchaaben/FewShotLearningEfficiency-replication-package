@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="owes" type="association" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="charges" type="association" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="issues" type="association" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="is" type="association" source="//@clazz.2" target="//@clazz.4"/>
+  <operation name="manages" type="association" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="Employ" type="association" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="uses" type="association" source="//@clazz.5" target="//@clazz.4"/>
+  <operation name="Parks" type="association" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="ass" type="association" source="//@clazz.6" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.2"/>
+  <operation name="uses" type="association" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.5"/>
+  <operation name="cleans" type="association" source="//@clazz.7" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.7" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.7" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.7" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.8" target="//@clazz.0"/>
+  <operation name="is" type="association" source="//@clazz.8" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.8" target="//@clazz.5"/>
+  <operation name="" type="composition" source="//@clazz.8" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.8" target="//@clazz.7"/>
+  <operation name="" type="composition" source="//@clazz.9" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.9" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.9" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.9" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.9" target="//@clazz.7"/>
+  <operation name="parks" type="association" source="//@clazz.9" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.9" target="//@clazz.3"/>
+  <operation name="drives" type="association" source="//@clazz.9" target="//@clazz.7"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.10"/>
+  <operation name="" type="association" source="//@clazz.10" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.7"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.8"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.10" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.10" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.10" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.7"/>
+  <operation name="" type="composition" source="//@clazz.10" target="//@clazz.8"/>
+  <clazz name="Parking" has="//@clazz.1 //@clazz.6 //@clazz.8">
+    <attributes name="currentCapacity" type="float"/>
+    <attributes name="maxCapacity" type="int"/>
+  </clazz>
+  <clazz name="Ticket" isMember="//@clazz.0">
+    <attributes name="cost" type="float"/>
+  </clazz>
+  <clazz name="Refund">
+    <attributes name="hours" type="double"/>
+    <attributes name="id" type="String"/>
+  </clazz>
+  <clazz name="Customer" has="//@clazz.4">
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Vehicle" generalizes="//@clazz.9 //@clazz.10" isMember="//@clazz.3">
+    <attributes name="id"/>
+    <attributes name="maxPassengers" type="int"/>
+  </clazz>
+  <clazz name="Staff" specializes="//@clazz.6"/>
+  <clazz name="Employee" generalizes="//@clazz.5 //@clazz.7" isMember="//@clazz.0">
+    <attributes name="id" type="int"/>
+    <attributes name="salary" type="double"/>
+  </clazz>
+  <clazz name="Cleaner" specializes="//@clazz.6"/>
+  <clazz name="Slot" isMember="//@clazz.0">
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="Motorbike" specializes="//@clazz.4"/>
+  <clazz name="Car" specializes="//@clazz.4">
+    <attributes name="manufacturer" type="String"/>
+  </clazz>
+  <clazzcondidate name="ticket" confidence="1"/>
+  <clazzcondidate name="refund" confidence="1"/>
+  <clazzcondidate name="travel" confidence="1"/>
+  <clazzcondidate name="event" confidence="1"/>
+  <clazzcondidate name="inv" confidence="1"/>
+  <clazzcondidate name="driver" confidence="2"/>
+  <clazzcondidate name="receipt" confidence="1"/>
+  <clazzcondidate name="month" confidence="1"/>
+  <clazzcondidate name="rental" confidence="1"/>
+  <clazzcondidate name="day" confidence="1"/>
+  <clazzcondidate name="lostandfound" confidence="1"/>
+  <clazzcondidate name="manager" confidence="1"/>
+  <clazzcondidate name="university" confidence="1"/>
+  <clazzcondidate name="student" confidence="1"/>
+  <clazzcondidate name="lect" confidence="1"/>
+  <clazzcondidate name="car" confidence="1"/>
+  <clazzcondidate name="bike" confidence="1"/>
+  <association source="//@clazz.2" target="//@clazz.1"/>
+  <association source="//@clazz.3" target="//@clazz.1"/>
+  <association source="//@clazz.1" target="//@clazz.4"/>
+  <association source="//@clazz.1" target="//@clazz.8"/>
+</metamodel:Model>

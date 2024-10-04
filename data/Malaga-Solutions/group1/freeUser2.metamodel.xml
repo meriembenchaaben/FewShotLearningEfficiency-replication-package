@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="evaluates" type="association" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="made" type="association" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.1" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.1" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.1" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.1" target="//@clazz.5"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="wrote" type="association" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="evaluates" type="association" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="wrote" type="association" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.5"/>
+  <clazz name="Paper" has="//@clazz.4">
+    <attributes name="id" type="int"/>
+    <attributes name="title" type="String"/>
+    <attributes name="year" type="int"/>
+  </clazz>
+  <clazz name="Editor">
+    <attributes name="email" type="String"/>
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Reviewer">
+    <attributes name="speciality" type="String"/>
+  </clazz>
+  <clazz name="Author">
+    <attributes name="department" type="String"/>
+  </clazz>
+  <clazz name="Submission" isMember="//@clazz.0">
+    <attributes name="id" type="int"/>
+  </clazz>
+  <clazz name="Review">
+    <attributes name="id" type="String"/>
+  </clazz>
+  <clazz name="EditorialDecission">
+    <attributes name="description" type="String"/>
+  </clazz>
+  <clazzcondidate name="reviewer" confidence="2"/>
+  <clazzcondidate name="author" confidence="2"/>
+  <clazzcondidate name="con" confidence="1"/>
+  <clazzcondidate name="submission" confidence="2"/>
+  <clazzcondidate name="article" confidence="1"/>
+  <clazzcondidate name="publication" confidence="3"/>
+  <clazzcondidate name="issue" confidence="1"/>
+  <clazzcondidate name="journal" confidence="1"/>
+  <clazzcondidate name="magazine" confidence="1"/>
+  <association name="wrote" source="//@clazz.0" target="//@clazz.3"/>
+  <association source="//@clazz.0" target="//@clazz.1"/>
+  <association name="assigned" source="//@clazz.4" target="//@clazz.2"/>
+  <association name=" writes " source="//@clazz.2" target="//@clazz.5"/>
+  <association name="evaluates" source="//@clazz.4" target="//@clazz.5"/>
+  <association source="//@clazz.1" target="//@clazz.6"/>
+  <association source="//@clazz.6" target="//@clazz.5"/>
+</metamodel:Model>

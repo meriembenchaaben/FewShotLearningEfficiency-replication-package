@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="association" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="Te" type="association" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="studies" type="association" source="//@clazz.5" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="" type="inheritance" source="//@clazz.5" target="//@clazz.4"/>
+  <clazz name="Teacher">
+    <attributes name="name" type="String"/>
+    <attributes name="birthdayDate" type="Date"/>
+  </clazz>
+  <clazz name="Student" specializes="//@clazz.2">
+    <attributes name="middleName" type="String"/>
+    <attributes name="sex" type="String"/>
+    <attributes name="name" type="String"/>
+    <attributes name="birthdayDate" type="Date"/>
+  </clazz>
+  <clazz name="Class" generalizes="//@clazz.1">
+    <attributes name="label" type="String"/>
+    <attributes name="location" type="String"/>
+  </clazz>
+  <clazz name="Subject" has="//@clazz.4">
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazz name="Course" isMember="//@clazz.3">
+    <attributes name="description" type="String"/>
+  </clazz>
+  <clazz name="Department">
+    <attributes name="id" type="int"/>
+    <attributes name="name" type="String"/>
+  </clazz>
+  <clazzcondidate name="school" confidence="2"/>
+  <clazzcondidate name="department" confidence="1"/>
+  <clazzcondidate name="course" confidence="3"/>
+  <clazzcondidate name="major" confidence="1"/>
+  <clazzcondidate name="schoolcountry" confidence="1"/>
+  <clazzcondidate name="grade" confidence="1"/>
+  <clazzcondidate name="section" confidence="1"/>
+  <clazzcondidate name="college" confidence="1"/>
+  <clazzcondidate name="university" confidence="1"/>
+  <association name="Studies" source="//@clazz.3" target="//@clazz.1"/>
+  <association name="teaches" source="//@clazz.3" target="//@clazz.0"/>
+  <association source="//@clazz.5" target="//@clazz.3"/>
+  <association source="//@clazz.4" target="//@clazz.1"/>
+  <association source="//@clazz.2" target="//@clazz.0"/>
+</metamodel:Model>

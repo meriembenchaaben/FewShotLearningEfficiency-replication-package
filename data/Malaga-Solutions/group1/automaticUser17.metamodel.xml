@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="composition" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="is" type="association" source="//@clazz.2" target="//@clazz.4"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.4"/>
+  <operation name="is" type="association" source="//@clazz.2" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.3" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.5"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.6"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="" type="inheritance" source="//@clazz.4" target="//@clazz.6"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.5"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.1"/>
+  <operation name="is" type="association" source="//@clazz.2" target="//@clazz.7"/>
+  <operation name="Book" type="association" source="//@clazz.7" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.7" target="//@clazz.4"/>
+  <operation name="" type="association" source="//@clazz.7" target="//@clazz.6"/>
+  <clazz name="Guest"/>
+  <clazz name="Room" generalizes="//@clazz.3 //@clazz.4" has="//@clazz.2 //@clazz.5 //@clazz.6"/>
+  <clazz name="Reservation" isMember="//@clazz.1"/>
+  <clazz name="SingleRoom" specializes="//@clazz.1"/>
+  <clazz name="DoubleRoom" specializes="//@clazz.1"/>
+  <clazz name="Check-in" isMember="//@clazz.1"/>
+  <clazz name="Checkout" isMember="//@clazz.1"/>
+  <clazz name="Payment"/>
+  <clazzcondidate name="table" confidence="1"/>
+  <clazzcondidate name="recipe" confidence="1"/>
+  <clazzcondidate name="meal" confidence="1"/>
+  <clazzcondidate name="food" confidence="1"/>
+  <clazzcondidate name="hotel" confidence="5"/>
+  <clazzcondidate name="bill" confidence="1"/>
+  <clazzcondidate name="doubleroom" confidence="1"/>
+  <clazzcondidate name="checkout" confidence="1"/>
+  <clazzcondidate name="customer" confidence="1"/>
+  <association name="has" source="//@clazz.2" target="//@clazz.0"/>
+  <association source="//@clazz.5" target="//@clazz.0"/>
+  <association name="owes" source="//@clazz.6" target="//@clazz.0"/>
+  <association source="//@clazz.7" target="//@clazz.5"/>
+  <association source="//@clazz.7" target="//@clazz.0"/>
+  <association source="//@clazz.7" target="//@clazz.6"/>
+</metamodel:Model>

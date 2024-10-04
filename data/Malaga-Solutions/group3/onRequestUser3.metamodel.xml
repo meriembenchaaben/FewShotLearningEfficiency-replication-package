@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.umontreal.geodes/metamodel">
+  <operation name="" type="inheritance" source="//@clazz.0" target="//@clazz.1"/>
+  <operation name="" type="composition" source="//@clazz.1" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.2" target="//@clazz.1"/>
+  <operation name="made" type="association" source="//@clazz.2" target="//@clazz.3"/>
+  <operation name="has" type="association" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="places" type="association" source="//@clazz.3" target="//@clazz.2"/>
+  <operation name="has" type="association" source="//@clazz.3" target="//@clazz.0"/>
+  <operation name="is" type="association" source="//@clazz.3" target="//@clazz.1"/>
+  <operation name="can" type="association" source="//@clazz.4" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.4" target="//@clazz.1"/>
+  <operation name="can" type="association" source="//@clazz.4" target="//@clazz.2"/>
+  <operation name="" type="composition" source="//@clazz.4" target="//@clazz.3"/>
+  <operation name="requires" type="association" source="//@clazz.5" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.5" target="//@clazz.3"/>
+  <operation name="Makes" type="association" source="//@clazz.5" target="//@clazz.4"/>
+  <operation name="" type="composition" source="//@clazz.6" target="//@clazz.0"/>
+  <operation name="is" type="association" source="//@clazz.6" target="//@clazz.2"/>
+  <operation name="makes" type="association" source="//@clazz.6" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.6" target="//@clazz.4"/>
+  <operation name="Per" type="association" source="//@clazz.6" target="//@clazz.5"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.7" target="//@clazz.1"/>
+  <operation name="With" type="association" source="//@clazz.7" target="//@clazz.3"/>
+  <operation name="" type="composition" source="//@clazz.7" target="//@clazz.5"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.0"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.1"/>
+  <operation name="" type="inheritance" source="//@clazz.8" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.8" target="//@clazz.3"/>
+  <operation name="makes" type="association" source="//@clazz.8" target="//@clazz.4"/>
+  <operation name="makes" type="association" source="//@clazz.8" target="//@clazz.5"/>
+  <operation name="" type="association" source="//@clazz.8" target="//@clazz.6"/>
+  <operation name="" type="composition" source="//@clazz.8" target="//@clazz.7"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.0"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.2"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.3"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.5"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.6"/>
+  <operation name="" type="association" source="//@clazz.11" target="//@clazz.12"/>
+  <clazz name="Bank" has="//@clazz.3 //@clazz.1 //@clazz.8"/>
+  <clazz name="Account" generalizes="//@clazz.10" isMember="//@clazz.0">
+    <attributes name="dateOfBirth" type="Date"/>
+    <attributes name="email" type="String"/>
+    <attributes name="password" type="String"/>
+    <attributes name="username" type="String"/>
+  </clazz>
+  <clazz name="Transaction" generalizes="//@clazz.4 //@clazz.5 //@clazz.6"/>
+  <clazz name="Customer" has="//@clazz.9 //@clazz.11 //@clazz.12" isMember="//@clazz.0"/>
+  <clazz name="Withdraw" specializes="//@clazz.2"/>
+  <clazz name="Deposit" specializes="//@clazz.2"/>
+  <clazz name="Transfer" specializes="//@clazz.2"/>
+  <clazz name="Atm"/>
+  <clazz name="Employee" isMember="//@clazz.0"/>
+  <clazz name="Address" isMember="//@clazz.3"/>
+  <clazz name="Accountsaving" specializes="//@clazz.1"/>
+  <clazz name="Loan" isMember="//@clazz.3"/>
+  <clazz name="Credit" isMember="//@clazz.3"/>
+  <clazzcondidate name="party" confidence="2"/>
+  <clazzcondidate name="accountsaving" confidence="1"/>
+  <clazzcondidate name="transaction" confidence="1"/>
+  <clazzcondidate name="loan" confidence="8"/>
+  <clazzcondidate name="credit" confidence="2"/>
+  <clazzcondidate name="mortgage" confidence="4"/>
+  <clazzcondidate name="atm" confidence="1"/>
+  <clazzcondidate name="deposit" confidence="1"/>
+  <clazzcondidate name="savings" confidence="1"/>
+  <clazzcondidate name="b" confidence="1"/>
+  <clazzcondidate name="checking" confidence="1"/>
+  <clazzcondidate name="product" confidence="1"/>
+  <clazzcondidate name="address" confidence="1"/>
+  <clazzcondidate name="m" confidence="2"/>
+  <clazzcondidate name="sav" confidence="1"/>
+  <clazzcondidate name="accountchecking" confidence="1"/>
+  <clazzcondidate name="check" confidence="1"/>
+  <clazzcondidate name="creditcard" confidence="1"/>
+  <clazzcondidate name="ContactMethod" confidence="1"/>
+  <clazzcondidate name="Accounttype" confidence="1"/>
+  <clazzcondidate name="interest" confidence="1"/>
+  <clazzcondidate name="debit" confidence="1"/>
+  <clazzcondidate name="duration" confidence="1"/>
+  <clazzcondidate name="amount" confidence="1"/>
+  <association source="//@clazz.3" target="//@clazz.1"/>
+  <association source="//@clazz.2" target="//@clazz.1"/>
+  <association source="//@clazz.6" target="//@clazz.1"/>
+  <association source="//@clazz.4" target="//@clazz.7"/>
+  <association source="//@clazz.5" target="//@clazz.7"/>
+</metamodel:Model>
