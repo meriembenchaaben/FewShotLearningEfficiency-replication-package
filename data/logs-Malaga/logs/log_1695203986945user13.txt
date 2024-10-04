@@ -1,0 +1,1 @@
+2023-09-20 11:59:46.949 , INFO , null , Application started , [OnslineShoppingSystem, ProductCatalogue, Product, Item, Order, Customer, Shipment, Payment] ,  -  , [OnslineShoppingSystem: [], ProductCatalogue: [], Product: [description,image,price,availability,], Item: [], Order: [], Customer: [name,], Shipment: [deliveryDate,shipmentDate,], Payment: [amount,]] ,  - 

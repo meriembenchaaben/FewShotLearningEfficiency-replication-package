@@ -1,0 +1,1 @@
+2023-07-24 11:12:38.466 , INFO , null , Application started , [house, Animal, Car, owner] ,  -  , [house: [], Animal: [], Car: [], owner: []] ,  - 
