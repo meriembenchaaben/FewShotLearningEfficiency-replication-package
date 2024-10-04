@@ -27,7 +27,7 @@ The experiments were conducted at the University of Montreal in Canada and the U
 
 - **Locations:** University of Montreal, Canada; University of Malaga, Spain.
 - **Participants:** 30 participants, recruited from a diverse pool of undergraduate and graduate students, postdoctoral researchers, professors, and industry experts.
-- **Language:** English, with occasional native language support for clarification.
+- **Language:** English.
 
 ### Experimental Setup and Tasks
 
@@ -39,6 +39,7 @@ The experiments were conducted at the University of Montreal in Canada and the U
 The replication package includes the following files and directories:
 
 - **Protocol and Questionnaires:** All materials related to the study setup, including task descriptions, participant instructions, and questionnaires used during the experiments.
+- **Solutions:** xml files of different domain models designed by participants for different tasks. 
 - **Anonymized Data:** The anonymized log files and data collected from some participants, including time-to-completion records and questionnaire responses. PS: We don't provide all the collected data.
 - **Scripts:** Python scripts and Jupyter notebooks used for data processing, analysis, and plotting results.
 - **Figures:** Demographic distributions and experimental results generated during the study.
