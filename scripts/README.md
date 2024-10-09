@@ -1,6 +1,6 @@
 * [ModelToFacts.ipynb](https://github.com/meriembenchaaben/FewShotLearningEfficiency-replication-package/blob/main/scripts/ModelToFacts.ipynb): converts the designed solutions of each participant from .metamodel files into facts for later analysis.
 * [logs-to-Dataframes.ipynb](https://github.com/meriembenchaaben/FewShotLearningEfficiency-replication-package/blob/main/scripts/logs_to_Dataframes.ipynb): generates dataframes capturing the tracked behavior of each participant during the design process from log files.
-* [.ipynb]() generates the rest of the metrics time, acceptance rate, assessment rate, ...
+* [QuantitativeAnalysis.ipynb]() generates the rest of the metrics time, acceptance rate, assessment rate, ...
 * [SimilarityCheck_ExactMatch_ManualMatch.ipynb](https://github.com/meriembenchaaben/UtilityOfDomainModelCompletion-replicationPackage/blob/main/scripts/SimilarityCheck_ExactMatch_ManualMatch.ipynb): analyses the diversity between obtained solutions using both metrics exact match and manual match. Also generates similarity matrices between all solutions for each assistance mode, based on manual matching.
 * [Participant_preference_analysis_FreeTask.ipynb
 ](https://github.com/meriembenchaaben/FewShotLearningEfficiency-replication-package/blob/main/scripts/Participant_preference_analysis_FreeTask.ipynb): generates plots from the free task to analyze participants' preferences regarding the assistance modes used.
