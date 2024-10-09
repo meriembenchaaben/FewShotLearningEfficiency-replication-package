@@ -5,3 +5,4 @@
 * [Participant_preference_analysis_FreeTask.ipynb
 ](https://github.com/meriembenchaaben/FewShotLearningEfficiency-replication-package/blob/main/scripts/Participant_preference_analysis_FreeTask.ipynb): generates plots from the free task to analyze participants' preferences regarding the assistance modes used.
 * [plotFormsResults.ipynb](https://github.com/meriembenchaaben/FewShotLearningEfficiency-replication-package/blob/main/scripts/plotFormsResults.ipynb): serves to plot  the results of the questionnaire that each participant completed after finishing the tasks (RQ5).
+* [plotDemographic_data.ipynb](https://github.com/meriembenchaaben/UtilityOfDomainModelCompletion-replicationPackage/blob/main/scripts/plotDemographic_data.ipynb): serves to plot demographcic data with regard the participants of the user study.
